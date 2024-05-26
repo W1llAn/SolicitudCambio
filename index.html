@@ -3,15 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estiloIndex.css">
-    <title>Solicitud de Cambio</title>
+    <title>Formulario de Solicitud</title>
+    <link rel="stylesheet" href="estiloFormulario.css">
+    <link rel="icon" href="img/icon-document.png" type="imagen/png">
 </head>
 <body>
-
-    <header>
-        <p>Solicitudes de cambio</p>
-        <a href="formulario.html"><button>Crear una nueva solicitud</button></a>
-    </header>
+    <div class="header">
+        <h1>SOLICITUD DE <span>CAMBIO</span></h1>
+        <h3>SOFTWARE</h3>
+    </div>
+    <a href="listaFormularios.html"  class="boton"><button    type="submit" class="btn btn-primary btn-block btn-large">Lista de solicitudes de cambio</button></a>
+    <div class="container">
+      <div class="section">
+        <h2>INFORMACIÓN DEL <span>SOLICITANTE</span></h2>
     
-</body>
-</html>
+        <div class="contenedorHijo">
+            <div class="input-group">
+                <label class="input-label" for="codigo">Código:</label>
+                <p class="input-field2" id="codigo">1</p>
+              </div>
+
+            <div class="input-group">
+            <label class="input-label" for="fechaSolicitud">Fecha de solicitud:</label>
+            <p class="input-field3" id="fechaSolicitud"></p>
+            </div>
+        
+            <div class="input-group">
+            <label class="input-label" for="registro">Fecha de Registro:</label>
+            <p class="input-field3" id="registro">---</p>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label" for="nombre">Nombre del solicitante:</label>
+            <input class="input-field" type="text" id="nombre">
+          </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="area">Área:</label>
+          <input class="input-field" type="text" id="area">
+        </div>
+      </div>
+      <div class="section">
+        <h2>INFORMACIÓN DEL <span>CAMBIO</span></h2>
+    
+        <div class="input-group">
+          <label class="input-label" for="tipo">Tipo de cambio:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="estandar">
+              Estándar
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="normal">
+              Normal
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="emergente">
+              Emergente
+            </label>
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="infraestructura">Infraestructura que impacta:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="servidor_db">
+              Servidor de base de Datos
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="servidor_web">
+              Servidor web
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="servidor_aplicacion">
+              Servidor de Aplicación
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="base_datos">
+              Base de Datos
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="otros">
+              Otros:
+            </label>
+          </div>
+        </div>
+        <hr>
+        <div class="input-group">
+          <label class="input-label" for="descripcion">Descripción del cambio:</label>
+          <textarea class="input-field" id="descripcion"></textarea>
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="justificacion">Justificación:</label>
+          <textarea class="input-field" id="justificacion"></textarea>
+        </div>
+        <hr>
+        <div class="contenedorHijo">
+            <div class="input-group">
+                <label class="input-label" for="validad_por">Validad por:</label>
+                <input class="input-field4" type="text" id="validad_por">
+            </div>
+            <div class="input-group">
+                <label class="input-label" for="autorizado_por">Autorizado por:</label>
+                <input class="input-field4" type="text" id="autorizado_por">
+            </div>
+        </div>    
+        <hr>   
+        <div class="input-group">
+              <label class="input-label" for="justificacion">Motivo del rechazo:</label>
+              <textarea class="input-field" id="justificacion"></textarea>
+        </div>
+        <hr>
+          <div class="input-group">
+            <label class="input-label" for="validad_por">Responsable del cambio</label>
+            <input class="input-field" type="text" id="validad_por">
+          </div>
+          
+          <div class="input-group">
+              <label class="input-label" for="justificacion">Descripcion de acciones del cambio:</label>
+              <textarea class="input-field" id="justificacion"></textarea>
+          </div>
+  
+          <div class="input-group">
+              <label class="input-label" for="fecha">Fecha del cambio:</label>
+              <p class="input-field3"id="fecha">----</p>
+          </div>
+          <hr>
+          <label class="input-label" for="tipo">Validación del solicitante:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="estandar">
+              Aprobado
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="normal">
+              Denegado
+            </label>
+        </div>
+        <div class="contenedorBoton">
+            <button>Enviar Formulario</button>
+        </div>
+        
+      </div>
+
+    <div class="section">
+        
+    </div>
+    <script src="Script.js"></script>
+    </body>
+    </html>
