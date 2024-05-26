@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud</title>
+    <link rel="stylesheet" href="estiloFormulario.css">
+</head>
+<body>
+    <div class="header">
+        <h1>SOLICITUD DE CAMBIO</h1>
+        <h2>SOFTWARE</h2>
+    </div>
+    <div class="container">
+      <div class="section">
+        <h2>INFORMACIÓN DEL SOLICITANTE</h2>
+    
+        <div class="input-group">
+          <label class="input-label" for="codigo">Código:</label>
+          <input class="input-field" type="text" id="codigo">
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="nombre">Nombre del solicitante:</label>
+          <input class="input-field" type="text" id="nombre">
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="fecha">Fecha de solicitud:</label>
+          <input class="input-field" type="date" id="fecha">
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="registro">Fecha de Registro:</label>
+          <input class="input-field" type="date" id="registro">
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="area">Área:</label>
+          <input class="input-field" type="text" id="area">
+        </div>
+      </div>
+    
+      <div class="section">
+        <h2>INFORMACIÓN DEL CAMBIO</h2>
+    
+        <div class="input-group">
+          <label class="input-label" for="tipo">Tipo de cambio:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="estandar">
+              Estándar
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="normal">
+              Normal
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="radio" name="tipo" id="emergente">
+              Emergente
+            </label>
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="infraestructura">Infraestructura que impacta:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="servidor_db">
+              Servidor de base de Datos
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="servidor_web">
+              Servidor web
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="servidor_aplicacion">
+              Servidor de Aplicación
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="base_datos">
+              Base de Datos
+            </label>
+            <label class="checkbox-label">
+              <input class="checkbox-input" type="checkbox" name="infraestructura" id="otros">
+              Otros:
+            </label>
+          </div>
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="descripcion">Descripción del cambio:</label>
+          <textarea class="input-field" id="descripcion"></textarea>
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="justificacion">Justificación:</label>
+          <textarea class="input-field" id="justificacion"></textarea>
+        </div>
+      </div>
+    
+      <div class="section">
+        <div class="input-group">
+          <label class="input-label" for="validad_por">Validad por:</label>
+          <input class="input-field" type="text" id="validad_por">
+        </div>
+    
+        <div class="input-group">
+          <label class="input-label" for="autorizado_por">Autorizado por:</label>
+          <input class="input-field" type="text" id="autorizado_por">
+        </div>
+        <div class="input-group">
+            <label class="input-label" for="justificacion">Motivo del rechazo:</label>
+            <textarea class="input-field" id="justificacion"></textarea>
+          </div>
+      </div>
+
+
+    <div class="section">
+        <div class="input-group">
+          <label class="input-label" for="validad_por">Responsable del cambio</label>
+          <input class="input-field" type="text" id="validad_por">
+        </div>
+        
+        <div class="input-group">
+            <label class="input-label" for="justificacion">Descripcion de acciones del cambio:</label>
+            <textarea class="input-field" id="justificacion"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label" for="fecha">Fecha del cambio:</label>
+            <input class="input-field" type="date" id="fecha">
+        </div>
+
+        <label class="input-label" for="tipo">Validación del solicitante:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input class="checkbox-input" type="radio" name="tipo" id="estandar">
+            Aprobado
+          </label>
+          <label class="checkbox-label">
+            <input class="checkbox-input" type="radio" name="tipo" id="normal">
+            Denegado
+          </label>
+
+      </div>
+    </div>
+    </body>
+    </html>
