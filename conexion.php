@@ -17,9 +17,9 @@ class Conexion {
 
     public function testConnection() {
         if ($this->con->ping()) {
-            echo 'Se conectó exitosamente';
+           // echo 'Se conectó exitosamente';
         } else {
-            echo 'Error: ' . $this->con->error;
+            //echo 'Error: ' . $this->con->error;
         }
     }
 

@@ -36,7 +36,7 @@ $formulario = new Formulario(
     $estado
 );
 
-$servicio->insertSolicitud($formulario);
+
 
 ///////////// infraestructura opciones ////////////////
 $id_solicitud = $servicio->getLastIdSolicitud();
@@ -47,13 +47,23 @@ $BD = isset($_POST['infraestructura4']) && $_POST['infraestructura4'] === 'BD' ?
 $otros = isset($_POST['infraestructura5']) && $_POST['infraestructura5'] === 'otros' ? 1 : 0;
 
 $infraestructura = new infraestructura(
-    $id_solicitud, 
+    $id_solicitud+1, 
     $servidor_BD, 
     $servidor_web, 
     $servidor_app, 
     $BD, 
     $otros);
 
-$servicio->insertarInfraestructuras($infraestructura);
+    $form =$servicio->insertSolicitud($formulario);
+
+    if ($form) {
+        if( $servicio->insertarInfraestructuras($infraestructura)){
+            header("Location: pagina_respuesta.php?status=success");
+            exit();
+        }
+    } else {
+        header("Location: pagina_respuesta.php?status=error");
+        exit();
+    }
 
 ?>
