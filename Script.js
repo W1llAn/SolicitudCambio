@@ -11,4 +11,4 @@
 
  // Insertar la fecha formateada en el elemento HTML
  const elementoFecha = document.getElementById('fechaSolicitud');
- elementoFecha.textContent = fechaFormateada;
+ elementoFecha.value = fechaFormateada;
